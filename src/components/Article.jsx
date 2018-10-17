@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import "../App.css";
-import axios from "axios";
+import "../Article.css";
 import SingleArticle from "./SingleArticle";
 import * as api from '../api.js'
 
@@ -14,7 +14,7 @@ class Article extends Component {
       return (
         <div>
           {this.state.article && this.state.comments && <SingleArticle
-          article={this.state.article} comments={this.state.comments}
+          article={this.state.article} comments={this.state.comments} user={this.props.user}
           />}
         </div>
 

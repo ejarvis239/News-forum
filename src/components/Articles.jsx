@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import "../App.css";
-import axios from "axios";
+import "../Article.css";
 import List from "./List";
 import * as api from '../api.js'
 

@@ -17,8 +17,22 @@ export const getComments = (article_id) => {
     .then(({data}) => data.comments)
 }
 
-// api
-// export const vote = (id, direction) => {
-//   return axios.patch(`${API_URL}/articles/${id}?votes=${direction}`)
-//   .then(({data})=> data.article)
+export const vote = (id, direction) => {
+  return axios.patch(`${API_URL}/articles/${id}?votes=${direction}`)
+  .then(({data})=> data.article)
+}
 
+export const commentVote = (id, direction) => {
+    return axios.patch(`${API_URL}/comments/${id}?votes=${direction}`)
+    .then(({data})=> data.comment)
+  }
+
+export const getUser = async (username) => {
+const {data} = await axios.get(`${API_URL}/users/${username}`)
+return data.user
+}
+
+export const postComment = async (id, body, created_by) => {
+  const {data} = axios.post(`${API_URL}/articles/${id}/comments`, {id, body, created_by});
+  return data.comment
+}

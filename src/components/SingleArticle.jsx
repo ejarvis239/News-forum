@@ -1,6 +1,7 @@
 import React from "react";
 import "../Article.css";
-import Comments from './Comments'
+import Comments from './Comments';
+import Voter from './Voter'
 
 const SingleArticle = props => {
     const imageLinks = {
@@ -19,11 +20,15 @@ const SingleArticle = props => {
                 <img id="articleImage" src={imageLinks[props.article.belongs_to]} alt="{article.belongs_to}" width="100" height="100" />
                 </p>
                 <p id="articleBody" >{props.article.body}</p>
+                
+
                 <p id="articleVotes">
                 Votes: {props.article.votes}
                 </p>
+                {<Voter id={props.article._id} votes={props.article.votes}/>}
+                      
                 <p id="createdBy">
-                <img id="userImage" src="https://miro.medium.com/fit/c/240/240/0*nGIlOdrq0yUfDUJf.png" alt="jessjelly" width="100" height="100" />
+                <img id="userImage" src={props.article.created_by.avatar_url} alt="jessjelly" width="100" />
                 <br/>
                 Author: {props.article.created_by.username}
                 <br/>Created: {props.article.created_at}
@@ -45,7 +50,7 @@ const SingleArticle = props => {
                 </p>
 
                 <div id="singleCommentContainer">
-                {<Comments comments={props.comments} />}
+                {<Comments comments={props.comments} user={props.user}/>}
                 </div>
                 </div>
                 <br/>
