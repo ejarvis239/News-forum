@@ -3,8 +3,6 @@ import "../Article.css";
 import "../App.css";
 import * as api from '../api.js'
 
-
-/*
 class CommentPoster extends Component {
   state = {
     body: ""
@@ -12,42 +10,32 @@ class CommentPoster extends Component {
 
   render () {
     return (
-      <form onSubmit={this.handleSubmit}>
-        <input type="text"
+    <div id="postCommentContainer">
+      <form id="postCommentContainer" onSubmit={this.handleSubmit}>
+        <input id="postCommentBox" type="text"
         aria-label="comment body"
+        placeholder="Post a comment..."
         onChange={this.handleChange}
         name="body"
         />
-        <button>Post!</button>
+        <button>Post</button>
       </form>
+    </div>
     );
   }
-}
 
 handleSubmit = (event) => {
   event.preventDefault();
-  this.props.addComment
-  this.setState{
-``
-  }
+  this.props.addComment(this.state.body)
 
 }
 
 handleChange = (event) => {
-  const {name, value} = event.target;
+  const { value } = event.target;
   this.setState({
-    [name]: value
+    body: value
   })
 }
-
-// in comments file
-sent addcomment function via props.....
-
-addComment = (body) => {
-  api.postComment(this.props.id, body, this.props.user._id)
-  .then(comment => {
-    this.setState({
-      comments: [comment, ...this.state.comments]
-    })
-  })
 }
+
+export default CommentPoster;

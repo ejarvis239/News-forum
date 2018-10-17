@@ -2,6 +2,7 @@ import React from "react";
 import "../App.css"
 import "../Article.css";
 import CommentVoter from './CommentVoter'
+import CommentDeleter from './CommentDeleter'
 
 const Comments = props => {
     return (
@@ -24,6 +25,7 @@ const Comments = props => {
                     Votes: {comment.votes}
                     </p>
                     {<CommentVoter id={comment._id} votes={comment.votes}/>}
+                    {<CommentDeleter id={comment._id} created_by={comment.created_by._id} user={props.user} deleteComment={props.deleteComment}/>}
                     </div>
                 </div>
             })}

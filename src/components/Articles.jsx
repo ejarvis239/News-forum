@@ -30,19 +30,6 @@ class Articles extends Component {
         this.setState({
           articles })})
       
-
-    // getArticles = () => {
-    //   axios
-    //     .get(`https://nc-news-emma.herokuapp.com/api/articles`)
-    //     .then(({ data }) => {
-    //       console.log(data)
-    //       this.setState({
-    //         articles: data.articles
-    //       });
-    //     })
-    //     .catch(err => {
-    //       this.setState({ err });
-    //     });
     };
     }
 

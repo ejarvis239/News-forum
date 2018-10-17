@@ -14,10 +14,9 @@ class Article extends Component {
       return (
         <div>
           {this.state.article && this.state.comments && <SingleArticle
-          article={this.state.article} comments={this.state.comments} user={this.props.user}
+          article={this.state.article} comments={this.state.comments} user={this.props.user} addComment={this.addComment} deleteComment={this.deleteComment}
           />}
         </div>
-
       )
     }
 
@@ -37,6 +36,20 @@ class Article extends Component {
         this.setState({
           comments })}) 
         }
+
+    addComment = (body) => {
+    api.postComment(this.props.article_id, body, this.props.user._id)
+    .then((comment) => {
+      this.setState({
+        comments: [comment, ...this.state.comments]
+      })
+    })
+  }
+
+  deleteComment = () => {
+    api.deleteComment() 
+    
+  }
  }
 
 

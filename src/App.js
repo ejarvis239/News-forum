@@ -30,6 +30,7 @@ class App extends Component {
   }
 
   login = (username) => {
+    console.log(username)
     api.getUser(username)
     .then(user => {
       this.setState ({

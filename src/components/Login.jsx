@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import "../Article.css";
 import "../App.css";
-import * as api from '../api.js'
 
 class Login extends Component {
     state = {
@@ -9,14 +8,17 @@ class Login extends Component {
     }
 
   render() {
-    if (this.props.user.username) return this.props.children ;
+    if (this.props.user.username) return this.props.children;
+    else {
     return ( <form onSubmit={this.handleSubmit}>
       <label htmlFor="username">Username: </label>
-      <input type="text" name="username" name="username" onChange={this.handleChange} value={this.state.username}/>
+      <input type="text" name="username" 
+      onChange={this.handleChange} value={this.state.username}/>
         <button>Log in </button>
       </form>
     )
     }
+}
   
   handleSubmit = (event) => {
     event.preventDefault()
@@ -32,4 +34,4 @@ class Login extends Component {
   }
 }
 
-export default Login
+export default Login;

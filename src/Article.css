@@ -65,12 +65,24 @@ align-self: center
   align-self: center
 }
 
-#postComment {
+::placeholder  {
   word-spacing: 10px;
+  font-size: 20px;
   text-align: center;
   color: grey;
   width: 600px;
   line-height: 1.5;
+  align-self: center
+}
+
+#postCommentBox {
+  display: flex;
+  flex-direction: column;
+  border-style: solid;
+  border-width: 1px;
+  border-color: lightgray;
+  width: 700px;
+  height: 150px;
   align-self: center
 }
 

@@ -1,6 +1,7 @@
 import React from "react";
 import "../Article.css";
 import Comments from './Comments';
+import CommentPoster from './CommentPoster';
 import Voter from './Voter'
 
 const SingleArticle = props => {
@@ -34,23 +35,18 @@ const SingleArticle = props => {
                 <br/>Created: {props.article.created_at}
                 </p>
                 <div id="postCommentContainer">
-                <p id="postComment">
-                <br/>
-                Post a comment....
-                <br/>
-                <br/>
-                </p>
+                {<CommentPoster articleId={props.article._id} user={props.user} addComment={props.addComment}/>}
                 </div>
+
         
                 <p id="Responses"><strong>Responses</strong></p>
-
                 <div id="commentContainer">
                 <p id="commentCount">
                 Comments: {props.article.comments}
                 </p>
 
                 <div id="singleCommentContainer">
-                {<Comments comments={props.comments} user={props.user}/>}
+                {<Comments comments={props.comments} user={props.user} deleteComment={props.deleteComment} />}
                 </div>
                 </div>
                 <br/>
