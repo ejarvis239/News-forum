@@ -9,7 +9,7 @@ import Article from "./components/Article";
 import Login from "./components/Login";
 import * as api from './api';
 import NotFound from './components/NotFound';
-// import Logged from './components/Logged'
+import Logged from './components/Logged'
 
 class App extends Component {
   state = {
@@ -28,9 +28,9 @@ render() {
     </div>
   </div>
       <Nav />
-      <Login login={this.login} user={this.state.user}>
+      <Login login={this.login} user={this.state.user} >
       <Router>
-       {/* <Logged path="/" user={this.state.user} /> */}
+       <Logged path="/" user={this.state.user} signout={this.signOut} />
        <Articles path="/articles" heading="articles" />
        <Articles path="/articles/:topic" heading="articles" />
        <Article path="/article/:article_id" heading="article" user={this.state.user} />
@@ -69,11 +69,11 @@ render() {
     })
   }
 
-  // signOut = () => {
-  //   this.setState({
-  //     user: null
-  //   })
-  // }
+  signOut = () => {
+    this.setState({
+      user: {}
+    })
+  }
 }
 
 export default App;
