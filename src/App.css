@@ -3,7 +3,7 @@
   flex-direction: row;
   flex-wrap: wrap;
   text-align: center;
-  justify-content: space-evenly;
+  justify-content: center;
   align-items: flex-end;
   align-content: center;
   margin-left: 1%;
@@ -11,19 +11,28 @@
   margin-bottom: 5%;
 }
 
+
 p {
   text-align: justify;
   width: 290px;
   margin: 1%
 }
 
-h2, h3, h4, h5 {
+h2 {
+  text-align: center;
+  align-content: center;
+  width: 200px;
+}
+
+h3, h4, h5 {
   text-align: center;
   align-content: center;
   width: 300px;
 }
 
 .App {
+  display: flex;
+  flex-direction: column;
   text-align: center;
 }
 

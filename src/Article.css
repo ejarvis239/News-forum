@@ -1,3 +1,11 @@
+#loginContainer {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  margin: 5%;
+  width: 400px;
+} 
+
 #ArticleContainer {
   display: flex;
   flex-direction: column;

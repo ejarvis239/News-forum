@@ -38,8 +38,6 @@ export const postComment =  (id, body, created_by ) => {
     .then(({data}) => data.comment)
 }
 
-
 export const deleteComment =  (id) => {
-    return axios.delete(`${API_URL}/comments/${id}`)
-      .then()
-  }
+    axios.delete(`${API_URL}/comments/${id}`)
+}

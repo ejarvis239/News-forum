@@ -15,7 +15,7 @@ function List({articleList}) {
             acc.push (
                 <div id="TopicsContainer" key={article._id}> 
                 <div id="Topic">
-                    <h2>{article.title}</h2>
+                    <h3>{article.title}</h3>
                     <Link to={`/article/${article._id}`} className="nav">
                     {" "}
                     <img src={imageLinks[article.belongs_to]} alt="{article.belongs_to}" width="300" height="300" />

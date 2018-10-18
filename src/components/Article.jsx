@@ -25,6 +25,11 @@ class Article extends Component {
       this.fetchComments();
     };
 
+    componentDidUpdate = (prevState) => {
+      if (prevState.comments !==this.state.comments)
+      this.fetchComments()
+    }
+
     fetchArticle = () => {
       api.getArticle(this.props.article_id).then(article => {
         this.setState({
@@ -46,11 +51,15 @@ class Article extends Component {
     })
   }
 
-  deleteComment = () => {
-    api.deleteComment() 
-    
-  }
- }
+ deleteComment = (id) => {
+  api.deleteComment(id) 
+    .then(() => {
+    this.setState({
+      comments: this.state.comments.filter(comment => comment._id !== id)
+      })   
+     })
 
+}
+}
 
 export default Article;

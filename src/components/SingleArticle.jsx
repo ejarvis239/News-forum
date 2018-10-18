@@ -22,10 +22,6 @@ const SingleArticle = props => {
                 </p>
                 <p id="articleBody" >{props.article.body}</p>
                 
-
-                <p id="articleVotes">
-                Votes: {props.article.votes}
-                </p>
                 {<Voter id={props.article._id} votes={props.article.votes}/>}
                       
                 <p id="createdBy">
@@ -52,7 +48,15 @@ const SingleArticle = props => {
                 <br/>
                 <br/>
                 <br/>
-                <br/>         
+                <br/>       
+                <br/>
+                <br/>
+                <br/>
+                <br/>  
+                <br/>
+                <br/>
+                <br/>
+                <br/>      
             </div>
     )}
 

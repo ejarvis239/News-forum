@@ -4,15 +4,10 @@ import "../App.css";
 import * as api from '../api.js'
 
 class CommentDeleter extends Component {
-  state = {
-  }
-
-  if (this.props.comment.created_by !== this.props.user._id) return null;
-
-
+//   if (this.props.comment.created_by !== this.props.user._id) return null;
   render () {
     return (
-    <div id="">
+    <div id="articleVotes">
       <button onClick={() => this.delete() } > DELETE COMMENT </button>
     </div>
     );
@@ -20,10 +15,8 @@ class CommentDeleter extends Component {
 
   delete = () => {
     this.props.deleteComment(this.props.id);
-    this.setState((state) => ({
-      
-    }))
-    }
+    
+}
 }
 
 export default CommentDeleter;

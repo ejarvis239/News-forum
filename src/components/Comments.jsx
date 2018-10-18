@@ -19,13 +19,10 @@ const Comments = props => {
                     <p id="commentBody">
                     {comment.body}
                     </p>
+                    {<CommentDeleter id={comment._id} created_by={comment.created_by._id} user={props.user} deleteComment={props.deleteComment} />}
                     </div>
                     <div id="singleCommentContainer">
-                    <p id="commentVotes">
-                    Votes: {comment.votes}
-                    </p>
                     {<CommentVoter id={comment._id} votes={comment.votes}/>}
-                    {<CommentDeleter id={comment._id} created_by={comment.created_by._id} user={props.user} deleteComment={props.deleteComment}/>}
                     </div>
                 </div>
             })}

@@ -16,7 +16,6 @@ class Articles extends Component {
           articleList={this.state.articles}
           />
         </div>
-
       )
     }
 
@@ -24,12 +23,17 @@ class Articles extends Component {
       this.fetchArticles();
     };
 
+    componentDidUpdate = (prevProps) => {
+      if (prevProps.topic !== this.props.topic) {
+        this.fetchArticles();
+      }
+    }
+
     fetchArticles = () => {
       api.getArticles(this.props.topic).then(articles => {
         console.log(articles)
         this.setState({
           articles })})
-      
     };
     }
 
