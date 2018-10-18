@@ -25,11 +25,6 @@ class Article extends Component {
       this.fetchComments();
     };
 
-    componentDidUpdate = (prevState) => {
-      if (prevState.comments !==this.state.comments)
-      this.fetchComments()
-    }
-
     fetchArticle = () => {
       api.getArticle(this.props.article_id).then(article => {
         this.setState({
