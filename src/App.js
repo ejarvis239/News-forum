@@ -18,7 +18,7 @@ class App extends Component {
 
 render() {
   return (
-  <div className="App">
+  <div id="App">
     <div className="header">
       <a href="/" class="logo">The E Word</a>
       <div class="header-right">
@@ -27,6 +27,7 @@ render() {
       <a href="/">About</a>
     </div>
   </div>
+  
       <Nav />
       <Login login={this.login} user={this.state.user} >
       <Router>

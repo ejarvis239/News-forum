@@ -7,6 +7,16 @@
 } 
 
 #logged {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-content: center;
+    margin-left: 24%;
+}
+
+#loggedIn {
+  display: flex;
+  flex-direction: column;
   text-align: center;
   align-content: center;
   margin-left: 24%;

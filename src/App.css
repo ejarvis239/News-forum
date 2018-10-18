@@ -30,7 +30,7 @@ h3, h4, h5 {
   width: 300px;
 }
 
-.App {
+#App {
   display: flex;
   flex-direction: column;
   text-align: center;
