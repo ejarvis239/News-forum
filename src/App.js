@@ -8,6 +8,8 @@ import Articles from "./components/Articles";
 import Article from "./components/Article";
 import Login from "./components/Login";
 import * as api from './api';
+import NotFound from './components/NotFound';
+// import Logged from './components/Logged'
 
 class App extends Component {
   state = {
@@ -28,10 +30,12 @@ render() {
       <Nav />
       <Login login={this.login} user={this.state.user}>
       <Router>
-       {/* <Topics path="/" heading="topics" /> */}
+       {/* <Logged path="/" user={this.state.user} /> */}
        <Articles path="/articles" heading="articles" />
        <Articles path="/articles/:topic" heading="articles" />
        <Article path="/article/:article_id" heading="article" user={this.state.user} />
+       <NotFound path="/error"/>
+       <NotFound default />
       </Router>
 </Login>
 
@@ -47,15 +51,29 @@ render() {
 
   }
 
+  componentDidMount() {
+    const user = sessionStorage.getItem('username')
+    if (user) {
+      this.setState({user: JSON.parse(user)})
+    }
+  }
+
   login = (username) => {
     console.log(username)
     api.getUser(username)
     .then(user => {
+      sessionStorage.setItem("username", JSON.stringify(user))
       this.setState ({
         user
       })
     })
   }
+
+  // signOut = () => {
+  //   this.setState({
+  //     user: null
+  //   })
+  // }
 }
 
 export default App;

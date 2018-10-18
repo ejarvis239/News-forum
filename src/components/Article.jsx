@@ -3,6 +3,7 @@ import "../App.css";
 import "../Article.css";
 import SingleArticle from "./SingleArticle";
 import * as api from '../api.js'
+import { navigate } from '@reach/router'
 
 class Article extends Component {
     state = {
@@ -29,6 +30,9 @@ class Article extends Component {
       api.getArticle(this.props.article_id).then(article => {
         this.setState({
           article })})
+          .catch((err) => {
+            this.props.navigate('/error', {replace: true, state: {msg: err.message}})
+          })
         }
       
     fetchComments = () => {
