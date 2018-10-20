@@ -42,18 +42,24 @@ export const deleteComment =  (id) => {
     
 }
 
-export const addArticle = async (title, belongs_to, body, user) => {
+export const addArticle = (articleObj, topic) => {
     return axios
-      .post(`${API_URL}/topics/${belongs_to}/articles`, {
-        title: title,
-        body: body,
-        created_by: user
-      })
-      .then(({ data }) => data.articles);
+      .post(`${API_URL}/topics/${topic}/articles`, articleObj)
+      .then(({ data }) => data.article);
   };
+  
+/*
+export const makeVote = (updown, id, type) => {
+  return axios
+    .patch(`${API_URL}/${type}s/${id}?votes=${updown}`)
+    .then(({ data }) => data[type]);
+};
 
-  export const getUsers = () => {
-    return axios
-      .get(`${API_URL}/users`)
-      .then(({ data }) => data.users);
-  };
+export const getUser = username => {
+  return axios
+    .get(`${API_URL}/users/${username}`)
+    .then(({ data }) => data.user);
+};
+
+
+*/

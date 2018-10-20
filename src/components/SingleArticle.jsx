@@ -3,6 +3,7 @@ import "../Article.css";
 import Comments from './Comments';
 import CommentPoster from './CommentPoster';
 import Voter from './Voter'
+import { Link } from "@reach/router";
 
 const SingleArticle = props => {
     const imageLinks = {
@@ -27,7 +28,11 @@ const SingleArticle = props => {
                 <p id="createdBy">
                 <img id="userImage" src={props.article.created_by.avatar_url} alt="jessjelly" width="100" />
                 <br/>
-                Author: {props.article.created_by.username}
+                
+                Author: <Link to={`/users/${props.article.created_by.username}`}>
+                {props.article.created_by.username}              
+                </Link>             
+                
                 <br/>Created: {props.article.created_at}
                 </p>
                 <div id="postCommentContainer">

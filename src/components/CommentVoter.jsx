@@ -11,7 +11,7 @@ state = {
 }
 
 render () {
-const {id, votes} = this.props
+const {votes} = this.props
 const {voteMod} = this.state
 // if (err) return <p>Vote Failed</p>
 

@@ -3,6 +3,7 @@ import "../App.css";
 import "../Article.css";
 import List from "./List";
 import * as api from '../api.js'
+import Nav from "./Nav.jsx";
 
 class Articles extends Component {
     state = {
@@ -12,6 +13,8 @@ class Articles extends Component {
     render() {
       return (
         <div>
+          <Nav />
+          
           <List
           articleList={this.state.articles}
           />
@@ -31,7 +34,6 @@ class Articles extends Component {
 
     fetchArticles = () => {
       api.getArticles(this.props.topic).then(articles => {
-        console.log(articles)
         this.setState({
           articles })})
     };

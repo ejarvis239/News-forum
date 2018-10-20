@@ -1,3 +1,23 @@
+#App {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  align-content: center;
+} 
+
+#PostArticleContainer {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  align-content: center;
+}
+
+#link {
+  margin-bottom: 5%
+}
+
 #loginContainer {
   display: flex;
   flex-direction: column;
@@ -11,7 +31,8 @@
     flex-direction: column;
     text-align: center;
     align-content: center;
-    margin-left: 24%;
+    justify-content: center;
+    margin-bottom: 20%;
 }
 
 #loggedIn {
@@ -86,7 +107,7 @@ align-self: center
   border-width: 1px;
   border-color: lightgray;
   width: 700px;
-  align-self: center
+  align-self: center;
 }
 
 ::placeholder  {

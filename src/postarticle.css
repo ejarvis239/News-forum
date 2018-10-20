@@ -1,0 +1,26 @@
+#PostArticleContainer {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-content: center;
+  }
+  
+  #postArticleFormContainer {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-content: center;
+    margin-left: 15%;
+    margin-right: 15%;
+    margin-bottom: 20%;
+  }
+
+  #postArticleFormTitleContainer {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-content: center;
+  }

@@ -1,13 +1,10 @@
 import React from "react";
-import { Link } from "@reach/router";
 import "../App.css";
 import Topics from "./Topics"
 
 const Nav = () => {
   return (
-    <div>
-      <br/>
-      <br/>
+    <div id="App">
         <Topics path="/" heading="topics" />
     </div>
   );

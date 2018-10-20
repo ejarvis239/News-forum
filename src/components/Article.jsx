@@ -3,7 +3,7 @@ import "../App.css";
 import "../Article.css";
 import SingleArticle from "./SingleArticle";
 import * as api from '../api.js'
-import { navigate } from '@reach/router'
+import PropTypes from "prop-types";
 
 class Article extends Component {
     state = {
@@ -60,5 +60,9 @@ class Article extends Component {
 
 }
 }
+
+Article.propTypes = {
+user: PropTypes.object.isRequired
+};
 
 export default Article;

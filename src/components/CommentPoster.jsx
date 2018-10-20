@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import "../Article.css";
 import "../App.css";
-import * as api from '../api.js'
 
 class CommentPoster extends Component {
   state = {

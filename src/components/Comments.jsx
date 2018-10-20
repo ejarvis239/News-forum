@@ -3,6 +3,7 @@ import "../App.css"
 import "../Article.css";
 import CommentVoter from './CommentVoter'
 import CommentDeleter from './CommentDeleter'
+import { Link } from "@reach/router";
 
 const Comments = props => {
     return (
@@ -12,7 +13,10 @@ const Comments = props => {
                return <div>
                    <div id="singleCommentContainer">
                     <p id="commentItems">
-                    <strong>username: {comment.created_by.username}</strong>
+                    <strong>username: <Link to={`/users/${comment.created_by.username}`}>
+                    {comment.created_by.username}             
+                </Link>    
+                </strong>
                     <br/><img src={comment.created_by.avatar_url} alt={comment.created_by.name} height="42" ></img>
                     <br/>created: {comment.created_at}
                     </p>

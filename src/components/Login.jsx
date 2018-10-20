@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import "../Article.css";
+import "../App.css";
 
 class Login extends Component {
     state = {
@@ -11,29 +12,22 @@ class Login extends Component {
     else {
     return ( 
 
-    <form id="loginContainer" onSubmit={this.handleSubmit}>
-      <label htmlFor="username">Username: </label>
-      <input type="text" name="username" 
-      onChange={this.handleChange} value={this.state.username}/>
+      <div id="App">
+        <form id="loginContainer" onSubmit={this.handleSubmit}>
+        <label htmlFor="username">Username: </label>
+        <input type="text" name="username" 
+          onChange={this.handleChange} value={this.state.username}/>
         <button>Log in </button>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
       </form>
+      </div>
     )
     }
-}
+  }
   
   handleSubmit = (event) => {
     event.preventDefault()
     this.props.login(this.state.username)
   }
-  
   
   handleChange = (event) => {
     this.setState({

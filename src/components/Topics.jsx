@@ -1,10 +1,12 @@
 import React from "react";
 import "../App.css";
+import "../Article.css";
 import { Link } from "@reach/router";
+import PostArticle from './PostArticle'
 
-const Topics = () => {
+const Topics = (props) => {
         return (
-            <div>
+            <div id="PostArticleContainer">                
             <h1>News Topics</h1>
            
             <div id="TopicsContainer">
@@ -39,15 +41,16 @@ const Topics = () => {
                     <h2>Movies</h2>
                     <Link to="/articles/movies" className="nav">
                     {" "}
-                    <img src="https://i.pinimg.com/564x/1a/6f/b1/1a6fb1a4aed5cc0d2a502628bae02352.jpg" alt="Music" width="100"  />  </Link>              
+                    <img src="https://i.pinimg.com/564x/1a/6f/b1/1a6fb1a4aed5cc0d2a502628bae02352.jpg" alt="Movies" width="100"  />  </Link>              
                 </div>
                 <div id="Topic">
                     <h2>All Articles</h2>
                     <Link to="/articles" className="nav">
                     {" "}
-                    <img src="https://i.pinimg.com/564x/4e/e8/9a/4ee89ab101a9f206e1ed6867df87dce5.jpg" alt="Music" width="100"  />  </Link>              
+                    <img src="https://i.pinimg.com/564x/4e/e8/9a/4ee89ab101a9f206e1ed6867df87dce5.jpg" alt="All Articles" width="100"  />  </Link>              
                 </div>
-            </div>
+                </div >
+            {<PostArticle user={props.user} />}
             </div>
         )
     }
