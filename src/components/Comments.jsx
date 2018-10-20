@@ -4,6 +4,7 @@ import "../Article.css";
 import CommentVoter from './CommentVoter'
 import CommentDeleter from './CommentDeleter'
 import { Link } from "@reach/router";
+import dateFormat from 'dateformat';
 
 const Comments = props => {
     return (
@@ -13,12 +14,11 @@ const Comments = props => {
                return <div>
                    <div id="singleCommentContainer">
                     <p id="commentItems">
-                    <strong>username: <Link to={`/users/${comment.created_by.username}`}>
-                    {comment.created_by.username}             
-                </Link>    
-                </strong>
+                    <strong> <Link to={`/users/${comment.created_by.username}`}>
+                    {comment.created_by.username}</Link> commented on {dateFormat(comment.created_at,'dddd mmmm dS yyyy h:MM:ss TT')}
+                </strong>    
                     <br/><img src={comment.created_by.avatar_url} alt={comment.created_by.name} height="42" ></img>
-                    <br/>created: {comment.created_at}
+                    <br/>
                     </p>
                     <p id="commentBody">
                     {comment.body}

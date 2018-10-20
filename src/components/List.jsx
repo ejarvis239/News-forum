@@ -1,6 +1,7 @@
 import React from "react";
 import "../App.css";
 import { Link } from "@reach/router";
+import dateFormat from 'dateformat';
 
 function List({articleList}) {
     const imageLinks = {
@@ -14,13 +15,24 @@ function List({articleList}) {
        {articleList.reduce((acc, article) => {
             acc.push (
                 <div id="TopicsContainer" key={article._id}> 
-                <div id="Topic">
-                    <h3>{article.title}</h3>
+                <div id="articalTopic">
                     <Link to={`/article/${article._id}`} className="nav">
                     {" "}
-                    <img src={imageLinks[article.belongs_to]} alt="{article.belongs_to}" width="300" height="300" />
+                    <img src={imageLinks[article.belongs_to]} alt="{article.belongs_to}" width="70" height="70" />
                     </Link>
+                    <h3>{article.title}</h3>
                     <p>{article.body.slice(0, 100)}....</p>
+                    <p>Votes: {article.votes}</p>
+                    <p>
+                <img id="userImage" src={article.created_by.avatar_url} alt="jessjelly" width="40" />
+                <br/>
+                
+                Author: <Link to={`/users/${article.created_by.username}`}>
+                {article.created_by.username}              
+                </Link>             
+                
+                <br/>Published: {dateFormat(article.created_at,'dddd mmmm dS yyyy h:MM:ss TT')}
+                </p>
                 </div>
                 </div>
             )

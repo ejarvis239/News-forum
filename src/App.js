@@ -20,6 +20,7 @@ class App extends Component {
 
 render() {
   return (
+    <div id="bottom">
   <div id="App">
     <div className="header">
       <a href="/" class="logo">The E Word</a>
@@ -45,6 +46,8 @@ render() {
       </Router>
 </Login>
 
+</div>
+
 <footer id="footer">
 <div id="row">
   <p id='footertext'>Posted by: Emma Jarvis as a Northcoders project</p>
@@ -53,6 +56,7 @@ render() {
 </div>
 </footer>
       </div>
+      
     );
 
   }

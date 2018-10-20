@@ -16,7 +16,7 @@ class Articles extends Component {
           <Nav />
           
           <List
-          articleList={this.state.articles}
+          articleList={this.state.articles} 
           />
         </div>
       )

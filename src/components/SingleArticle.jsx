@@ -4,6 +4,7 @@ import Comments from './Comments';
 import CommentPoster from './CommentPoster';
 import Voter from './Voter'
 import { Link } from "@reach/router";
+import dateFormat from 'dateformat';
 
 const SingleArticle = props => {
     const imageLinks = {
@@ -33,7 +34,7 @@ const SingleArticle = props => {
                 {props.article.created_by.username}              
                 </Link>             
                 
-                <br/>Created: {props.article.created_at}
+                <br/>Published: {dateFormat(props.article.created_at,'dddd, mmmm dS, yyyy, h:MM:ss TT')}
                 </p>
                 <div id="postCommentContainer">
                 {<CommentPoster articleId={props.article._id} user={props.user} addComment={props.addComment}/>}
@@ -51,17 +52,7 @@ const SingleArticle = props => {
                 </div>
                 </div>
                 <br/>
-                <br/>
-                <br/>
-                <br/>       
-                <br/>
-                <br/>
-                <br/>
-                <br/>  
-                <br/>
-                <br/>
-                <br/>
-                <br/>      
+   
             </div>
     )}
 
