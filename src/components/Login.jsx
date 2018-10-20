@@ -13,6 +13,7 @@ class Login extends Component {
     return ( 
 
       <div id="App">
+      <h1>You must log in to view articles</h1>
         <form id="loginContainer" onSubmit={this.handleSubmit}>
         <label htmlFor="username">Username: </label>
         <input type="text" name="username" 

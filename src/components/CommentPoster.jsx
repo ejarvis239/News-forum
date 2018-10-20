@@ -9,7 +9,6 @@ class CommentPoster extends Component {
 
   render () {
     return (
-    <div id="postCommentContainer">
       <form id="postCommentContainer" onSubmit={this.handleSubmit}>
         <input id="postCommentBox" type="text"
         aria-label="comment body"
@@ -19,7 +18,6 @@ class CommentPoster extends Component {
         />
         <button>Post</button>
       </form>
-    </div>
     );
   }
 

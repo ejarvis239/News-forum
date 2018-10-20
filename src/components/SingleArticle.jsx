@@ -48,9 +48,7 @@ const SingleArticle = props => {
                 Comments: {props.article.comments}
                 </p>
 
-                <div id="singleCommentContainer">
                 {<Comments comments={props.comments} user={props.user} deleteComment={props.deleteComment} />}
-                </div>
                 </div>
                 <br/>
    
