@@ -19,8 +19,8 @@ return (<div id="articleVotes">
 <p id="commentVotes">
 Votes: {votes + this.state.voteMod}
 </p>
-<button onClick={() => this.vote("up") } disabled={voteMod===1}> <img src="http://icons-for-free.com/free-icons/png/512/2400509.png" alt="Vote Up" width="30"></img> </button>
-<button onClick={() => this.vote("down") } disabled={voteMod===-1}> <img src="http://icons-for-free.com/free-icons/png/512/2400511.png" alt="Vote Down" width="30"></img> </button>
+<button onClick={() => this.vote("up") } disabled={voteMod===1}> <img id="votebuttons" src="https://upload.wikimedia.org/wikipedia/commons/8/8b/Green_Arrow_Up_Darker.svg" alt="Vote Up"></img> </button>
+<button onClick={() => this.vote("down") } disabled={voteMod===-1}> <img id="votebuttons" src="https://upload.wikimedia.org/wikipedia/commons/0/04/Red_Arrow_Down.svg" alt="Vote Down" ></img> </button>
 </div>)
 
 }
