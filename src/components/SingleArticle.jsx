@@ -1,5 +1,6 @@
 import React from "react";
 import "../Article.css";
+import "../ArticleMobile.css";
 import Comments from './Comments';
 import CommentPoster from './CommentPoster';
 import Voter from './Voter'
