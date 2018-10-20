@@ -56,7 +56,7 @@ margin-top: 80px;
 font-size: 40px;
 word-spacing: 10px;
 text-align: left;
-width: 600px;
+/* width: 600px; */
 line-height: 1.5;
 align-self: center
 }
@@ -64,7 +64,7 @@ align-self: center
 #topicItems{
   word-spacing: 10px;
   text-align: right;
-  width: 600px;
+  /* width: 600px; */
   line-height: 1.5;
   align-self: center
 }
@@ -81,7 +81,7 @@ align-self: center
   font-size: 20px;
   word-spacing: 10px;
   text-align: justify;
-  width: 600px;
+  /* width: 600px; */
   margin: 20px;
   line-height: 1.5;
   align-self: center
@@ -90,7 +90,7 @@ align-self: center
 #articleVotes {
   word-spacing: 10px;
   text-align: right;
-  width: 600px;
+  /* width: 600px; */
   line-height: 1.5;
   align-self: center
 }
@@ -98,7 +98,7 @@ align-self: center
 #createdBy{
   word-spacing: 10px;
   text-align: left;
-  width: 600px;
+  /* width: 600px; */
   line-height: 1.5;
   align-self: center
 }
@@ -109,7 +109,7 @@ align-self: center
   border-style: solid;
   border-width: 1px;
   border-color: lightgray;
-  width: 700px;
+  /* width: 700px; */
   align-self: center;
 }
 
@@ -118,7 +118,7 @@ align-self: center
   font-size: 20px;
   text-align: center;
   color: grey;
-  width: 600px;
+  /* width: 600px; */
   line-height: 1.5;
   align-self: center
 }
@@ -129,7 +129,7 @@ align-self: center
   border-style: solid;
   border-width: 1px;
   border-color: lightgray;
-  width: 700px;
+  /* width: 700px; */
   height: 150px;
   align-self: center
 }
@@ -137,7 +137,7 @@ align-self: center
 #commentCount{
   word-spacing: 10px;
   text-align: right;
-  width: 600px;
+  /* width: 600px; */
   line-height: 1.5;
   align-self: center
 }
@@ -146,7 +146,7 @@ align-self: center
   word-spacing: 1px;
   font-size: 15px;
   text-align: left;
-  width: 600px;
+  /* width: 600px; */
   line-height: 1;
   align-self: center
 }
@@ -154,7 +154,7 @@ align-self: center
 #commentItems{
   word-spacing: 10px;
   text-align: left;
-  width: 600px;
+  /* width: 600px; */
   line-height: 1.5;
   align-self: center
 }
@@ -163,7 +163,7 @@ align-self: center
   word-spacing: 5px;
   font-style: italic;
   text-align: right;
-  width: 600px;
+  /* width: 600px; */
   line-height: 1.5;
   align-self: center
 }
@@ -171,7 +171,7 @@ align-self: center
 #commentBody{
   word-spacing: 2px;
   text-align: left;
-  width: 600px;
+  /* width: 600px; */
   line-height: 1.5;
   align-self: center;
 }
@@ -182,7 +182,7 @@ align-self: center
   border-style: solid;
   border-width: 1px;
   border-color: lightgrey;
-  width: 700px;
+  /* width: 700px; */
   align-self: center
 }
 
@@ -192,6 +192,6 @@ align-self: center
   border-style: solid;
   border-width: 1px;
   border-color: lightgrey;
-  width: 700px;
+  /* width: 700px; */
   align-self: center
 }
