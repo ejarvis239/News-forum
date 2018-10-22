@@ -24,11 +24,12 @@ class ArticleForm extends Component {
       <div id="postArticleFormContainer">
         <form onSubmit={this.handleSubmit}>
         <div id="App">
-              <input
+              <input 
                 name="title"
                 id="title"
                 placeholder="Title"
                 onChange={this.handleChange}
+                required
               />
           </div>
           <div id="App">
@@ -42,6 +43,7 @@ class ArticleForm extends Component {
                   <option value="coding">Coding</option>
                   <option value="football">Football</option>
                   <option value="cooking">Cooking</option>
+
                 </select>
               </div>
             </div>
@@ -52,6 +54,7 @@ class ArticleForm extends Component {
                 id="comment"
                 onChange={this.handleChange3}
                 placeholder="Write your article..."
+                required
               />
             </div>
           </div>
