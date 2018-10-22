@@ -12,7 +12,7 @@ const Comments = props => {
         <div>
             {props.comments.map((comment)=>{
     
-               return <div>
+               return <div key={comment._id}>
                    <div id="singleCommentContainer">
                     <p id="commentItems">
                     <strong> <Link to={`/users/${comment.created_by.username}`}>

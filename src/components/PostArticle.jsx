@@ -2,7 +2,6 @@ import React from "react";
 import "../App.css";
 import "../Article.css";
 import { Link } from "@reach/router";
-import PropTypes from "prop-types";
 
 const PostArticle = () => {
         return (     
@@ -16,9 +15,5 @@ const PostArticle = () => {
 
         )
     }
-
-PostArticle.propTypes = {
-  user: PropTypes.object.isRequired,
-};
 
 export default PostArticle;

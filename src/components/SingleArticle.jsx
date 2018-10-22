@@ -58,7 +58,7 @@ const SingleArticle = props => {
 
     SingleArticle.propTypes = {
         user: PropTypes.object.isRequired,
-        article: PropTypes.array.isRequired, 
+        article: PropTypes.object.isRequired, 
         comments: PropTypes.array.isRequired,
         addComment: PropTypes.func.isRequired, 
         deleteComment: PropTypes.func.isRequired, 

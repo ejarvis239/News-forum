@@ -23,9 +23,9 @@ render() {
     <div id="bottom">
   <div id="App">
     <div className="header">
-      <a href="/" class="logo">The E Word</a>
-      <div class="header-right">
-      <a class="active" href="/">Home</a>
+      <a href="/" className="logo">The E Word</a>
+      <div className="header-right">
+      <a className="active" href="/">Home</a>
       <a href="/users">User Profiles</a>
       <a href="/logout">Sign Out</a>
     </div>
@@ -75,6 +75,7 @@ render() {
   }
 
   signOut = () => {
+    sessionStorage.removeItem("username");
     this.setState({
       user: {}
     })

@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import * as api from '../api';
 import "../userpage.css";
-import PropTypes from "prop-types";
 
 class UserPage extends Component {
   state = {
@@ -39,9 +38,5 @@ class UserPage extends Component {
       })
   }
 }
-
-UserPage.propTypes = {
-  user: PropTypes.object.isRequired
-};
 
 export default UserPage;

@@ -19,7 +19,6 @@ class CommentDeleter extends Component {
 
 CommentDeleter.propTypes = {
   deleteComment: PropTypes.func.isRequired,
-  id: PropTypes.String
 };
 
 
