@@ -1,6 +1,7 @@
 import React from "react";
 import "../users.css";
 import { Link } from "@reach/router";
+import PropTypes from "prop-types";
 
 function UserList(props) {
     
@@ -24,5 +25,8 @@ function UserList(props) {
     )
 }
 
+UserList.propTypes = {
+    users: PropTypes.array.isRequired
+  };
 
 export default UserList;

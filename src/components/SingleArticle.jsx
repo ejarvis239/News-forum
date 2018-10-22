@@ -6,6 +6,7 @@ import CommentPoster from './CommentPoster';
 import Voter from './Voter'
 import { Link } from "@reach/router";
 import dateFormat from 'dateformat';
+import PropTypes from "prop-types";
 
 const SingleArticle = props => {
     const imageLinks = {
@@ -54,5 +55,14 @@ const SingleArticle = props => {
    
             </div>
     )}
+
+    SingleArticle.propTypes = {
+        user: PropTypes.object.isRequired,
+        article: PropTypes.array.isRequired, 
+        comments: PropTypes.array.isRequired,
+        addComment: PropTypes.func.isRequired, 
+        deleteComment: PropTypes.func.isRequired, 
+        };
+        
 
   export default SingleArticle;

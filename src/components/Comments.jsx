@@ -5,6 +5,7 @@ import CommentVoter from './CommentVoter'
 import CommentDeleter from './CommentDeleter'
 import { Link } from "@reach/router";
 import dateFormat from 'dateformat';
+import PropTypes from "prop-types";
 
 const Comments = props => {
     return (
@@ -34,5 +35,11 @@ const Comments = props => {
         </div>
     )
 }
+
+Comments.propTypes = {
+    deleteComment: PropTypes.func.isRequired,
+    user: PropTypes.object.isRequired,
+    comments: PropTypes.array.isRequired
+  };
 
 export default Comments

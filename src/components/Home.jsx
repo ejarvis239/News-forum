@@ -3,7 +3,7 @@ import "../Article.css";
 import "../App.css";
 import Nav from "./Nav.jsx";
 
-const Home = props => {
+const Home = () => {
         
     return ( 
     <div id="App">

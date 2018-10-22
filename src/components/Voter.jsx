@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import "../Article.css";
 import * as api from '../api.js'
+import PropTypes from "prop-types";
 
 class Voter extends Component {
 
@@ -31,5 +32,10 @@ this.setState((state) => ({
 }))
 }
 }
+
+Voter.propTypes = {
+  id: PropTypes.string,
+  votes: PropTypes.number
+};
 
 export default Voter;

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import "../Article.css";
 import "../App.css";
+import PropTypes from "prop-types";
 
 class Login extends Component {
     state = {
@@ -34,8 +35,12 @@ class Login extends Component {
     this.setState({
       username: event.target.value
     })
-  
   }
 }
+
+Login.propTypes = {
+  user: PropTypes.object.isRequired,
+  login: PropTypes.func.isRequired
+  };
 
 export default Login;

@@ -30,10 +30,9 @@ render() {
       <a href="/logout">Sign Out</a>
     </div>
   </div>
-  
       <Login login={this.login} user={this.state.user} >
       <Router>
-      <Home path="/" user={this.state.user}/>
+      <Home path="/" />
        <ArticlePoster path="/articleposter" user={this.state.user} />
        <Articles path="/articles" heading="articles" />
        <Articles path="/articles/:topic" heading="articles" />
@@ -47,7 +46,6 @@ render() {
 </Login>
 
 </div>
-
 <footer id="footer">
 <div id="row">
   <p id='footertext'>Posted by: Emma Jarvis as a Northcoders project</p>
@@ -56,9 +54,7 @@ render() {
 </div>
 </footer>
       </div>
-      
     );
-
   }
 
   componentDidMount() {
@@ -86,5 +82,3 @@ render() {
 }
 
 export default App;
-
-

@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import "../postarticle.css";
 import * as api from "../api";
 import { Link } from "@reach/router";
+import PropTypes from "prop-types";
 
 class ArticleForm extends Component {
   state = {
@@ -99,5 +100,9 @@ class ArticleForm extends Component {
     api.addArticle(title, belongs_to, body, user);
   };
 }
+
+ArticleForm.propTypes = {
+  user: PropTypes.object.isRequired
+  };
 
 export default ArticleForm;

@@ -1,7 +1,7 @@
 import React from 'react';
 import "../App.css";
 
-const notFound = (props) => {
+const notFound = () => {
     return (
         <div id="App">
         <h1>Error 404: Page not Found</h1>

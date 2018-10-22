@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import "../Article.css";
 import "../App.css";
 import * as api from '../api.js'
+import PropTypes from "prop-types";
 
 class CommentVoter extends Component {
 
@@ -32,6 +33,11 @@ this.setState((state) => ({
 }))
 }
 }
+
+CommentVoter.propTypes = {
+  id: PropTypes.string,
+  votes: PropTypes.number
+};
 
 export default CommentVoter;
 

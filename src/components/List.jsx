@@ -2,6 +2,7 @@ import React from "react";
 import "../App.css";
 import { Link } from "@reach/router";
 import dateFormat from 'dateformat';
+import PropTypes from "prop-types";
 
 function List({articleList}) {
     const imageLinks = {
@@ -41,5 +42,8 @@ function List({articleList}) {
     }, [])} </div>
     )}
 
+List.propTypes = {
+    articleList: PropTypes.array.isRequired
+};
 
 export default List;
