@@ -15,7 +15,8 @@ import UserPage from './components/UserPage'
 
 class App extends Component {
   state = {
-    user: {}
+    user: {},
+    err: null
   }
 
 render() {

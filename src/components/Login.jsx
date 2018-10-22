@@ -2,10 +2,12 @@ import React, { Component } from 'react';
 import "../Article.css";
 import "../App.css";
 import PropTypes from "prop-types";
+import * as api from "../api.js";
 
 class Login extends Component {
     state = {
-      username: "tickle122"
+      username: "tickle122",
+      err: null
     }
 
   render() {
@@ -20,6 +22,7 @@ class Login extends Component {
         <input type="text" name="username" 
           onChange={this.handleChange} value={this.state.username}/>
         <button>Log in </button>
+        {this.state.err ? <p>User does not exist!</p> : <></>}
       </form>
       </div>
     )
@@ -28,8 +31,14 @@ class Login extends Component {
   
   handleSubmit = (event) => {
     event.preventDefault()
-    this.props.login(this.state.username)
-  }
+    api.getUser(this.state.username)
+      .then(user => this.props.login(user.username))
+      .catch(err =>
+        this.setState({
+          err
+        })
+      );
+  };
   
   handleChange = (event) => {
     this.setState({
