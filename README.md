@@ -2,10 +2,6 @@
 
 Northcoders News is a social news aggregation, web content rating, and discussion website.
 
-##URL The site can be accessed on the following URL:
-
-https://the-e-word.herokuapp.com/
-
 ##API
 
 The website fetches data from the following API: https://nc-news-emma.herokuapp.com/api
